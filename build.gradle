@@ -40,11 +40,17 @@ dependencies {
     // Other
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2' // Add Jakarta Validation API
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Test dependencies
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // Spring Boot test starter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2' // JUnit 5
+    testImplementation 'org.mockito:mockito-core:4.5.1' // Mockito for mocking
 }
 
 tasks.named('test') {
